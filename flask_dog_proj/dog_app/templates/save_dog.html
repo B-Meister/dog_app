@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>This is a picture of a dog </p>
+    <p> <img src="{{ picture }}" alt="random Dog"> </p>
+    <p>This dog is a {{ breed }} </p>
+    <form action='/saved_dog' method="post">
+      <label for='dogname'> Give this doggo a name: </label>
+      <input type="text" id='dogname' name='dogname'>
+      <input type='hidden' id='dogbreed' name='dogbreed' value={{breed}}>
+      <input type="hidden" id='doglink' name='doglink' value={{picture}}>
+      <input type="submit" value="Save Dog">
+    </form>
+</body>
+</html>
